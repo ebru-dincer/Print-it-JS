@@ -26,7 +26,7 @@ leftArrow.addEventListener("click", () => {
 	console.log("un clique sur la flèche gauche");
 	indexSlide--
 	if (indexSlide < 0) {
-		indexSlide = 3;
+		indexSlide = slides.length - 1;
 	}
 	image.setAttribute("src", `./assets/images/slideshow/${slides[indexSlide].slidesName}`);
 	console.log(indexSlide);
