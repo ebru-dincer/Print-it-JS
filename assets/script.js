@@ -23,31 +23,23 @@ const tagLine = document.querySelector("#banner p");
 
 const leftArrow = document.querySelector(".arrow_left");
 leftArrow.addEventListener("click", () => {
-	console.log("un clique sur la flèche gauche");
 	indexSlide--
 	if (indexSlide < 0) {
 		indexSlide = slides.length - 1;
 	}
 	image.setAttribute("src", `./assets/images/slideshow/${slides[indexSlide].slidesName}`);
-	console.log(indexSlide);
-	console.log(slides[indexSlide].slidesName);
 	tagLine.innerHTML = slides[indexSlide].tagLine;
-	console.log(slides[indexSlide].tagLine);
 	changeDots ();
 });
 
 const rightArrow = document.querySelector(".arrow_right");
 rightArrow.addEventListener("click", () => {
-	console.log("un clique sur la flèche droite");
 	indexSlide++
 	if (indexSlide == slides.length) {
 		indexSlide = 0;
 	}
 	image.setAttribute("src", `./assets/images/slideshow/${slides[indexSlide].slidesName}`);
-	console.log(indexSlide);
-	console.log(slides[indexSlide].slidesName);
 	tagLine.innerHTML = slides[indexSlide].tagLine;
-	console.log(slides[indexSlide].tagLine);
 	changeDots ();
 
 });
